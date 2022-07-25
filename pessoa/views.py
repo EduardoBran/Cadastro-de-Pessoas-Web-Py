@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import CreateView, ListView, UpdateView
+from django.views.generic import CreateView, DeleteView, ListView, UpdateView
 
 from .forms import PessoaForm
 from .models import Pessoa
@@ -21,4 +21,9 @@ class PessoaCreateView(CreateView):
 class PessoaUpdateView(UpdateView):
     model = Pessoa
     form_class = PessoaForm
+    success_url = '/pessoas/'
+    
+
+class PessoaDeleteView(DeleteView):
+    model = Pessoa
     success_url = '/pessoas/'

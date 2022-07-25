@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+
+<form method="post">
+    {% csrf_token %}
+    <p>Are you surte you want to delete "{{ pessoa.nome_completo }}" ?</p>
+    <input type="submit" value="Confirm"></input>
+</form>
+
+{% endblock %}
