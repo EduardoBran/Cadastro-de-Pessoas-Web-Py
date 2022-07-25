@@ -22,10 +22,16 @@
         <tr>
             <td>{{ pessoa.nome }}</td>
             <td>{{ pessoa.sobrenome }}</td>
-            <td>{{ pessoa.data_nascimento }}</td>
+            <td>{{ pessoa.data_nascimento|date:"d/m/Y" }}</td>
             <td>{{ pessoa.email }}</td>
             <td>{{ pessoa.link_git }}</td>
-            <td>{{ pessoa.ativo }}</td>
+            <td>
+                {% if pessoa.ativo %}
+                Ativo
+                {% else %}
+                Desativado
+                {% endif %}
+            </td>
 
             {% endfor %}
         </tr>
