@@ -8,5 +8,6 @@ class ListaPessoaView(ListView):
     model = Pessoa
     queryset = Pessoa.objects.all().order_by('nome')
     template_name = 'pessoa/pessoa_lista.html'
+    context_object_name = 'pessoas'
     
 
