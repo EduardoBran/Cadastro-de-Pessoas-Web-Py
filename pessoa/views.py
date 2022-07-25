@@ -1,6 +1,7 @@
 from django.shortcuts import render
-from django.views.generic import ListView
+from django.views.generic import CreateView, ListView
 
+from .forms import PessoaForm
 from .models import Pessoa
 
 
@@ -11,3 +12,7 @@ class ListaPessoaView(ListView):
     context_object_name = 'pessoas'
     
 
+class PessoaCreateView(CreateView):
+    model = Pessoa
+    form_class = PessoaForm
+    success_url = '/pessoas/'

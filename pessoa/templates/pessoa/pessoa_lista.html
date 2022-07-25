@@ -4,6 +4,10 @@
 
 <br>
 
+<a href="{% url 'pessoa.novo' %}">Formulário</a>
+
+<br><br>
+
 <table>
     <thead>
         <tr>
@@ -32,9 +36,9 @@
                 Desativado
                 {% endif %}
             </td>
-
-            {% endfor %}
         </tr>
+        {% endfor %}
+
 
     </tbody>
 </table>

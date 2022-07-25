@@ -8,10 +8,10 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Cadastro de Pessoas</a>
+                    <a class="nav-link" href="{% url 'pessoa.novo' %}">Formulário</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'pessoa.index' %}">Lista de Pessoas</a>
+                    <a class="nav-link" href="{% url 'pessoa.index' %}">Lista</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0 ml-lg-4" action="/busca/">
