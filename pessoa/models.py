@@ -6,5 +6,5 @@ class Pessoa(models.Model):
     sobrenome = models.CharField(max_length=250)
     data_nascimento = models.DateField()
     email = models.EmailField(max_length=50)
-    link_git = models.URLField(max_length=150, null=True, blank=True)
+    link_git = models.URLField(max_length=150, blank=True)
     ativo = models.BooleanField(default=True)
