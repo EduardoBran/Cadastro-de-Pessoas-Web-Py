@@ -17,6 +17,7 @@
             <th>E-mail</th>
             <th>Link GitHub</th>
             <th>Status</th>
+            <th>Ações</th>
         </tr>
     </thead>
 
@@ -24,6 +25,7 @@
 
         {% for pessoa in pessoas %}
         <tr>
+
             <td>{{ pessoa.nome }}</td>
             <td>{{ pessoa.sobrenome }}</td>
             <td>{{ pessoa.data_nascimento|date:"d/m/Y" }}</td>
@@ -36,6 +38,9 @@
                 Desativado
                 {% endif %}
             </td>
+            <td><a href="{% url 'pessoa.editar' pessoa.pk %}">Editar</a></td>
+
+
         </tr>
         {% endfor %}
 
