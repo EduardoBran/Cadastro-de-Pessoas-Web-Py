@@ -4,10 +4,14 @@
 
 <br>
 
-<ul>
-    <li><a href="{% url 'pessoa.index' %}">Pessoas</a></li>
-</ul>
+<div class="row justify-content-end">
+    <div class="col-8">
 
+        <a href="{% url 'pessoa.novo' %}" style="width: 150px;"
+            class="btn btn-outline-secondary btn-lg mt-4">Formulário</a>
+        <a href="{% url 'pessoa.index' %}" style="width: 150px;" class="btn btn-outline-secondary btn-lg mt-4">Lista</a>
+    </div>
+</div>
 <br>
 
 {% endblock %}

@@ -14,7 +14,7 @@
                     <a class="nav-link" href="{% url 'pessoa.index' %}">Lista</a>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0 ml-lg-4" method="GET">
+            <form class="form-inline my-2 my-lg-0 ml-lg-4" method="GET" action="{% url 'pessoa.index' %}">
                 <input name="nome_busca" value="" class="form-control mr-sm-2" type="search"
                     placeholder="Buscar pelo nome" aria-label="Search">
             </form>
