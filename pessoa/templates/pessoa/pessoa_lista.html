@@ -2,27 +2,19 @@
 
 {% block conteudo %}
 
-<br>
-
-<a href="{% url 'pessoa.novo' %}">Formulário</a>
-
-<br><br>
-
-<div class="table-responsive">
-    <table class="table table-bordered table-hover">
-        <thead>
-            <tr>
+<div class="table-responsive" style="padding-top: 30px;">
+    <table class="table table-bordered table-hover" style="width: 100%;">
+        <thead class="thead-light">
+            <tr class="text-center">
                 <th scope="col">Nome</th>
                 <th scope="col">Sobrenome</th>
                 <th scope="col">Data de nascimento</th>
                 <th scope="col">E-mail</th>
                 <th scope="col">Link GitHub</th>
                 <th scope="col">Status</th>
-                <th scope="col">Ação 1</th>
-                <th scope="col">Ação 2</th>
+                <th scope="col" colspan="2">Ações</th>
             </tr>
         </thead>
-
         <tbody>
 
             {% for pessoa in pessoas %}
@@ -45,15 +37,22 @@
                     {% endif %}
                 </td>
                 <td><a href="{% url 'pessoa.editar' pessoa.pk %}">Editar</a></td>
-                <td><a href="{% url 'pessoa.remover' pessoa.pk %}">Remover</a></td>
-
+                <td><a href="{% url 'pessoa.remover' pessoa.pk %}">Excluir</a></td>
 
             </tr>
             {% endfor %}
 
-
         </tbody>
     </table>
 </div>
+<div class="col-lg-12">
+    <div class="row justify-content-end">
+        <div class="col-8">
 
+            <a href="{% url 'pessoa.novo' %}" style="width: 150px;"
+                class="btn btn-outline-secondary btn-lg mt-4">Formulário</a>
+            <a href="{% url 'index' %}" style="width: 150px;" class="btn btn-outline-secondary btn-lg mt-4">Início</a>
+        </div>
+    </div>
+</div>
 {% endblock %}
