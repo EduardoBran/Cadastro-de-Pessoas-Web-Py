@@ -11,6 +11,15 @@ class ListaPessoaView(ListView):
     template_name = 'pessoa/pessoa_lista.html'
     context_object_name = 'pessoas'
     
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        filtro_nome = self.request.GET.get('nome_busca') or None
+        
+        if filtro_nome:
+            queryset = queryset.filter(nome__contains=filtro_nome)
+            
+        return queryset
+    
 
 class PessoaCreateView(CreateView):
     model = Pessoa
