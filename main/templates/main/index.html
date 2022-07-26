@@ -3,19 +3,17 @@
 {% block conteudo %}
 
 <br>
-<div class="col-lg-12">
-    <div class="row justify-content-end">
-        <div class="col-8">
 
-            <a href="{% url 'pessoa.novo' %}" style="width: 150px;"
-                class="btn btn-outline-secondary btn-lg mt-4">Formulário</a>
-            <a href="{% url 'pessoa.index' %}" style="width: 150px;"
-                class="btn btn-outline-secondary btn-lg mt-4">Lista</a>
-        </div>
-    </div>
+<div class="mr-auto ml-auto text-center mt-3 mb-3">
+    <h1 style="margin-top: 15px;">Bem Vindo</h1>
+    <p style="font-size: 18px;">
+        Clique nos botões abaixo para acessar ou adicionar dados ao formulário.
+    </p>
+
+    <a href="{% url 'pessoa.novo' %}" style="width: 150px; margin-right: 20px;"
+        class="btn btn-outline-secondary btn-lg mt-4">Formulário</a>
+    <a href="{% url 'pessoa.index' %}" style="width: 150px;" class="btn btn-outline-secondary btn-lg mt-4">Lista</a>
+
 </div>
-<br>
-
-
 
 {% endblock %}
