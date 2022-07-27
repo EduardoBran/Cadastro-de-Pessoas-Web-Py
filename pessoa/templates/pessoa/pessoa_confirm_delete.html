@@ -1,11 +1,16 @@
 {% extends 'base.html' %}
 
+{% block titulo %}Tela de excluir{% endblock %}
+
 {% block conteudo %}
 
-<form method="post">
+<br>
+
+<form method="post" style="padding-top: 20px;">
     {% csrf_token %}
-    <p>Are you surte you want to delete "{{ pessoa.nome_completo }}" ?</p>
-    <input type="submit" value="Confirm"></input>
+    <p style="margin-left: 20px;">Tem certeza que gostaria de excluir "{{ pessoa.nome }} {{ pessoa.sobrenome }}" ?</p>
+    <button type="submit" class="btn btn-primary btn-block btn-lg mt-2 mb-2" style="width: 150px; margin-left: 20px;"
+        value="Confirm">Confirmar</button>
 </form>
 
 {% endblock %}

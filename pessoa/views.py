@@ -27,7 +27,7 @@ class ListaPessoaView(ListView):
 class PessoaCreateView(SuccessMessageMixin, CreateView):
     model = Pessoa
     form_class = PessoaForm
-    success_message = 'Pessoa foi adicionada com sucesso a lista.'
+    success_message = 'Pessoa adicionada com sucesso a lista.'
     success_url = '/pessoas/'
     
 
