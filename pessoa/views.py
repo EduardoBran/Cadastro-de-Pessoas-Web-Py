@@ -10,6 +10,7 @@ class ListaPessoaView(ListView):
     queryset = Pessoa.objects.all().order_by('nome')
     template_name = 'pessoa/pessoa_lista.html'
     context_object_name = 'pessoas'
+    paginate_by = 4
     
     def get_queryset(self):
         queryset = super().get_queryset()

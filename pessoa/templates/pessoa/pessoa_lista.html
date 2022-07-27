@@ -49,6 +49,9 @@
     <a href="{% url 'pessoa.novo' %}" style="width: 150px; margin-right: 20px;"
         class="btn btn-outline-secondary btn-lg mt-4">Formulário</a>
     <a href="{% url 'index' %}" style="width: 150px;" class="btn btn-outline-secondary btn-lg mt-4">Início</a>
-
 </div>
+
+{% include 'parciais/_pagination.html' %}
+
+
 {% endblock %}
