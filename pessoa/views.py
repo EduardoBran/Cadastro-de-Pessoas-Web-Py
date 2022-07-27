@@ -1,3 +1,4 @@
+from django.contrib.messages.views import SuccessMessageMixin
 from django.shortcuts import render
 from django.views.generic import CreateView, DeleteView, ListView, UpdateView
 
@@ -12,21 +13,23 @@ class ListaPessoaView(ListView):
     context_object_name = 'pessoas'
     paginate_by = 4
     
+    
     def get_queryset(self):
         queryset = super().get_queryset()
         filtro_nome = self.request.GET.get('nome_busca') or None
         
         if filtro_nome:
             queryset = queryset.filter(nome__contains=filtro_nome)
-            
+        
         return queryset
     
-
-class PessoaCreateView(CreateView):
+    
+class PessoaCreateView(SuccessMessageMixin, CreateView):
     model = Pessoa
     form_class = PessoaForm
+    success_message = 'Pessoa foi adicionada com sucesso a lista.'
     success_url = '/pessoas/'
-
+    
 
 class PessoaUpdateView(UpdateView):
     model = Pessoa
