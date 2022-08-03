@@ -1,0 +1,1 @@
+web: gunicorn projcadastro.wsgi  --log-file -
