@@ -22,8 +22,3 @@ Aplicação de conceitos em:
 # SCREENSHOT DO PROJETO
 
 ![Screenshot](./screenshot/screenshot.jpg)
-
-# LINK DO PROJETO
-Para visualizar o projeto no seu navegador utilize o link abaixo:
-
-https://cadastro-lista-pessoas.herokuapp.com
